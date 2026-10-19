@@ -36,5 +36,7 @@ git add .
 git commit -m "Build reusable teacher-blackboard video pipeline"
 git branch -M main
 git remote add origin git@github.com:USER/REPO.git
+# 若 22 端口被网络阻断，可改用：
+# git remote add origin git@ssh.github.com:USER/REPO.git
 git push -u origin main
 ```
