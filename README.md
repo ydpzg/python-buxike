@@ -8,6 +8,21 @@
 
 ![封面示例](assets/cover-example.png)
 
+## 第 1–15 章封面
+
+以下封面直接从各章成片首屏抽取，展示章节号、章节名和老师。
+
+| 章节 | 章节 |
+|---|---|
+| <strong>第 01 章</strong><br><sub>开始这段旅程</sub><br><img src="assets/covers/ch01.png" width="560" alt="第 01 章 开始这段旅程封面"> | <strong>第 02 章</strong><br><sub>变量、表达式与语句</sub><br><img src="assets/covers/ch02.png" width="560" alt="第 02 章 变量、表达式与语句封面"> |
+| <strong>第 03 章</strong><br><sub>条件判断</sub><br><img src="assets/covers/ch03.png" width="560" alt="第 03 章 条件判断封面"> | <strong>第 04 章</strong><br><sub>函数</sub><br><img src="assets/covers/ch04.png" width="560" alt="第 04 章 函数封面"> |
+| <strong>第 05 章</strong><br><sub>循环与迭代</sub><br><img src="assets/covers/ch05.png" width="560" alt="第 05 章 循环与迭代封面"> | <strong>第 06 章</strong><br><sub>字符串</sub><br><img src="assets/covers/ch06.png" width="560" alt="第 06 章 字符串封面"> |
+| <strong>第 07 章</strong><br><sub>文件</sub><br><img src="assets/covers/ch07.png" width="560" alt="第 07 章 文件封面"> | <strong>第 08 章</strong><br><sub>列表</sub><br><img src="assets/covers/ch08.png" width="560" alt="第 08 章 列表封面"> |
+| <strong>第 09 章</strong><br><sub>字典</sub><br><img src="assets/covers/ch09.png" width="560" alt="第 09 章 字典封面"> | <strong>第 10 章</strong><br><sub>元组</sub><br><img src="assets/covers/ch10.png" width="560" alt="第 10 章 元组封面"> |
+| <strong>第 11 章</strong><br><sub>正则表达式</sub><br><img src="assets/covers/ch11.png" width="560" alt="第 11 章 正则表达式封面"> | <strong>第 12 章</strong><br><sub>网络程序</sub><br><img src="assets/covers/ch12.png" width="560" alt="第 12 章 网络程序封面"> |
+| <strong>第 13 章</strong><br><sub>Python 与 Web 服务</sub><br><img src="assets/covers/ch13.png" width="560" alt="第 13 章 Python 与 Web 服务封面"> | <strong>第 14 章</strong><br><sub>对象与类</sub><br><img src="assets/covers/ch14.png" width="560" alt="第 14 章 对象与类封面"> |
+| <strong>第 15 章</strong><br><sub>Python 与数据库</sub><br><img src="assets/covers/ch15.png" width="560" alt="第 15 章 Python 与数据库封面"> | &nbsp; |
+
 ## 已完成的成片
 
 第 1–15 章视频，合计约 61 分钟。每章包含 MP4、SRT、timeline 和封面图；时长、文件大小见 [checks/video-manifest.json](checks/video-manifest.json)。
@@ -48,7 +63,7 @@ pip install -r requirements.txt
 
 ### 配置路径
 
-`scripts/build_ch02.py` 默认读取同目录的 `content/`。如果你的目录结构不同，修改脚本顶部的 `ROOT`：
+`scripts/build_course_video.py` 默认读取同目录的 `content/`。如果你的目录结构不同，修改脚本顶部的 `ROOT`：
 
 ```python
 ROOT = "/path/to/python-buxike"
@@ -57,7 +72,7 @@ ROOT = "/path/to/python-buxike"
 ### 生成一章
 
 ```bash
-python scripts/build_ch02.py --chapter 12 --reuse-audio
+python scripts/build_course_video.py --chapter 12 --reuse-audio
 ```
 
 第一次生成会调用 edge-tts 合成缺失音频。修改旁白后，如需重新配音，请更换缓存名或删除对应的 `work/mp3_chXX/` 缓存。
@@ -65,7 +80,7 @@ python scripts/build_ch02.py --chapter 12 --reuse-audio
 只生成用于审阅的静帧：
 
 ```bash
-python scripts/build_ch02.py --chapter 12 --preview
+python scripts/build_course_video.py --chapter 12 --preview
 ```
 
 输出：
