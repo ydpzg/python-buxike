@@ -4,9 +4,6 @@
 
 本仓库包含第 1–15 章的课程标题、分章封面、章节内容、字幕与时间轴生成流程，以及可复用的 Codex skill。
 
-![课程标题卡](assets/course-title.png)
-
-![封面示例](assets/cover-example.png)
 
 ## 第 1–15 章封面
 
