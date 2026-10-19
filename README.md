@@ -1,14 +1,16 @@
-# Teacher + Blackboard Video Course
+# Python 补习课｜从零开始学 Python
 
-用 Python 和 PIL 制作中文教学视频的可复现工具包：老师站在黑板前讲解，旁白、字幕、板书、代码终端、练习题和章节回顾由同一份内容数据生成。
+这里是「Python 补习课」的完整视频创造代码。它用 Python 和 PIL 生成老师站在黑板前讲解的中文教学视频：旁白、字幕、板书、代码终端、练习题和章节回顾都由同一份内容数据生成。
 
-这套工程来自一套 15 章的 Python 入门视频，但脚本和制作规则可以复用到其他技术课程。
+本仓库包含第 1–15 章的课程标题、分章封面、章节内容、字幕与时间轴生成流程，以及可复用的 Codex skill。
+
+![课程标题卡](assets/course-title.png)
 
 ![封面示例](assets/cover-example.png)
 
 ## 已完成的成片
 
-本线程完成第 1–15 章视频，合计约 61 分钟。每章包含 MP4、SRT、timeline 和封面图；时长、文件大小见 [checks/video-manifest.json](checks/video-manifest.json)。
+第 1–15 章视频，合计约 61 分钟。每章包含 MP4、SRT、timeline 和封面图；时长、文件大小见 [checks/video-manifest.json](checks/video-manifest.json)。
 
 - 第 1 章：3:33
 - 第 2 章：4:38
@@ -49,7 +51,7 @@ pip install -r requirements.txt
 `scripts/build_ch02.py` 默认读取同目录的 `content/`。如果你的目录结构不同，修改脚本顶部的 `ROOT`：
 
 ```python
-ROOT = "/path/to/teacher-blackboard-video-course"
+ROOT = "/path/to/python-buxike"
 ```
 
 ### 生成一章
