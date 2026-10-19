@@ -169,6 +169,8 @@ python scripts/check_outputs.py --output-dir outputs --min-seconds 180
 
 [skills/teacher-blackboard-video/SKILL.md](skills/teacher-blackboard-video/SKILL.md) 记录了下一套视频的完整工作流和验收清单。把 `skills/` 下的目录安装到 Codex 技能目录后，可以让下一个视频任务直接复用这些规则。
 
+直接启动下一个视频时，使用 [workflow/next-video-prompt.md](workflow/next-video-prompt.md) 中的提示词。
+
 ## 目录
 
 ```text
